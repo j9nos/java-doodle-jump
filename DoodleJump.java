@@ -261,7 +261,7 @@ class Player extends TwoDimensionalObject implements GameObject {
 			this.setCoordinateX(GLOBAL_VARIABLES.WINDOW_WIDTH);
 		}
 		if (this.getCoordinateX() > GLOBAL_VARIABLES.WINDOW_WIDTH) {
-			this.setCoordinateX(0 -GLOBAL_VARIABLES.PLAYER_WIDTH);
+			this.setCoordinateX(0 - GLOBAL_VARIABLES.PLAYER_WIDTH);
 		}
 	}
 
