@@ -6,6 +6,7 @@ import java.awt.event.KeyListener;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.awt.Font;
 import java.awt.Color;
@@ -150,10 +151,10 @@ class KeyController implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		switch (e.getKeyCode()) {
-			case java.awt.event.KeyEvent.VK_A:
+			case KeyEvent.VK_A:
 				aPressed = true;
 				break;
-			case java.awt.event.KeyEvent.VK_D:
+			case KeyEvent.VK_D:
 				dPressed = true;
 				break;
 		}
@@ -162,10 +163,10 @@ class KeyController implements KeyListener {
 	@Override
 	public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {
-			case java.awt.event.KeyEvent.VK_A:
+			case KeyEvent.VK_A:
 				aPressed = false;
 				break;
-			case java.awt.event.KeyEvent.VK_D:
+			case KeyEvent.VK_D:
 				dPressed = false;
 				break;
 		}
@@ -289,7 +290,7 @@ class SpriteLoader {
 	public static BufferedImage loadBufferedImage(String path) {
 		java.awt.image.BufferedImage bufferedImage = null;
 		try {
-			bufferedImage = ImageIO.read(new java.io.FileInputStream(path));
+			bufferedImage = ImageIO.read(new FileInputStream(path));
 		} catch (IOException ex) {
 			System.err.println(String.format("Could not find %s", path));
 		}
