@@ -21,7 +21,7 @@ public class DoodleJump extends JFrame {
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setTitle("Doodle Jump << In Java >>");
-		this.add(gamePanel);
+		this.add(this.gamePanel);
 		this.pack();
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
