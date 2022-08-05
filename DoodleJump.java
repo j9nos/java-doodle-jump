@@ -288,7 +288,7 @@ class Player extends TwoDimensionalObject implements GameObject {
 
 class SpriteLoader {
 	public static BufferedImage loadBufferedImage(String path) {
-		java.awt.image.BufferedImage bufferedImage = null;
+		BufferedImage bufferedImage = null;
 		try {
 			bufferedImage = ImageIO.read(new FileInputStream(path));
 		} catch (IOException ex) {
